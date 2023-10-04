@@ -19,3 +19,7 @@ if __name__ == '__main__':
     print('FILHOS DE DANILO')
     for filho in danilo.filhos:
         print(filho.nome)
+    danilo.sobrenome='Rubio'
+    del danilo.filhos #remover atributos dinamicamente
+    print(lucas.__dict__)
+    print(danilo.__dict__)
