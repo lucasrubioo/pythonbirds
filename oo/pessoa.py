@@ -35,3 +35,4 @@ if __name__ == '__main__':
     print(danilo.olhos)
     print(Pessoa.olhos)
     print(id(Pessoa.olhos) , id(lucas.olhos), id(danilo.olhos))
+    print()
