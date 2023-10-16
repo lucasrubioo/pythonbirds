@@ -9,7 +9,15 @@ class Pessoa:
         self.filhos = list(filhos)
 
     def cumprimentar(self):
-        return 'Ola'
+        return f'Ola {id(self)}'
+
+    @staticmethod # decorator de modo estatico
+    def modulo_estatico():
+        return 42
+
+    @classmethod # decorator de atributo de classe
+    def nome_e_atributo_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 if __name__ == '__main__':
     lucas = Pessoa(nome='Lucas',idade=24)
@@ -35,4 +43,5 @@ if __name__ == '__main__':
     print(danilo.olhos)
     print(Pessoa.olhos)
     print(id(Pessoa.olhos) , id(lucas.olhos), id(danilo.olhos))
-    print()
+    print(Pessoa.modulo_estatico() , lucas.modulo_estatico())
+    print(Pessoa.nome_e_atributo_de_classe() , lucas.nome_e_atributo_de_classe())
