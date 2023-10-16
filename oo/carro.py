@@ -140,7 +140,7 @@ class Direcao:
         # elif self.valor == LESTE:
         #     self.valor = NORTE
 
-
+print()
 
 
 
