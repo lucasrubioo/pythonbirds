@@ -141,7 +141,7 @@ class Direcao:
         #     self.valor = NORTE
 
 
-
+print()
 
 
 

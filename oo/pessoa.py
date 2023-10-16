@@ -45,3 +45,4 @@ if __name__ == '__main__':
     print(id(Pessoa.olhos) , id(lucas.olhos), id(danilo.olhos))
     print(Pessoa.modulo_estatico() , lucas.modulo_estatico())
     print(Pessoa.nome_e_atributo_de_classe() , lucas.nome_e_atributo_de_classe())
+    print()
