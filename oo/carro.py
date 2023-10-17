@@ -97,10 +97,8 @@ Exemplo:
 class Motor:
     def __init__(self):
         self.velocidade = 0
-
     def acelerar(self):
         self.velocidade += 1
-
     def frear(self):
         self.velocidade -= 2
         self.velocidade = (max(0, self.velocidade))
@@ -114,10 +112,8 @@ class Direcao:
     rotacao_para_esquerda_dct = {NORTE: OESTE, OESTE: SUL, SUL: LESTE, LESTE: NORTE}
     def __init__(self):
         self.valor = NORTE
-
     def girar_a_direita(self):
         self.valor = self.rotacao_para_direita_dct[self.valor]
-
         # Todos if/elif foram substituidos por uma linha de codigo usando o dinicionario
         #  if self.valor == NORTE:
         #     self.valor = LESTE
@@ -129,7 +125,6 @@ class Direcao:
         #     self.valor = NORTE
     def girar_a_esquerda(self):
         self.valor = self.rotacao_para_esquerda_dct[self.valor]
-
         # Todos if/elif foram substituidos por uma linha de codigo usando o dinicionario
         # if self.valor == NORTE:
         #     self.valor = OESTE
@@ -139,6 +134,24 @@ class Direcao:
         #     self.valor = LESTE
         # elif self.valor == LESTE:
         #     self.valor = NORTE
+class Carro:
+    def __init__(self, direcao, motor):
+        self.motor = motor
+        self.direcao = direcao
+    def calcular_velocidade(self):
+        return self.motor.velocidade
+    def acelerar(self):
+        return self.motor.acelerar()
+    def frear(self):
+        return self.motor.frear()
+    def calcular_direcao(self):
+        return self.direcao.valor
+    def girar_a_direita(self):
+        return self.direcao.girar_a_direita()
+    def girar_a_esquerda(self):
+        return self.direcao.girar_a_esquerda()
+
+
 
 
 
