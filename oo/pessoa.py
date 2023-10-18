@@ -19,10 +19,14 @@ class Pessoa:
     def nome_e_atributo_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
+class Homem(Pessoa):
+    pass
+# classe homem herdou todos atributos e metodos da classe pessoa
+
 if __name__ == '__main__':
-    lucas = Pessoa(nome='Lucas',idade=24)
-    gustavo = Pessoa(nome='Gustavo', idade=11)
-    danilo = Pessoa(lucas,gustavo,nome='Danilo', idade=42)
+    lucas = Homem(nome='Lucas',idade=24)
+    gustavo = Homem(nome='Gustavo', idade=11)
+    danilo = Homem(lucas,gustavo,nome='Danilo', idade=42)
     print(lucas.cumprimentar())
     print(lucas.idade)
     print(lucas.nome)
@@ -45,4 +49,8 @@ if __name__ == '__main__':
     print(id(Pessoa.olhos) , id(lucas.olhos), id(danilo.olhos))
     print(Pessoa.modulo_estatico() , lucas.modulo_estatico())
     print(Pessoa.nome_e_atributo_de_classe() , lucas.nome_e_atributo_de_classe())
+    pessoa = Pessoa('Anonima')
+    print(isinstance(pessoa, Pessoa))
+    print(isinstance(lucas, Pessoa))
+    print(isinstance(lucas, Homem))
 
