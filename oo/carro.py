@@ -92,7 +92,8 @@ Exemplo:
     'Norte'
     >>> carro.girar_a_esquerda()
     >>> carro.calcular_direcao()
-    'Oeste' """
+    'Oeste'
+    """
 
 class Motor:
     def __init__(self):
@@ -114,7 +115,7 @@ class Direcao:
         self.valor = NORTE
     def girar_a_direita(self):
         self.valor = self.rotacao_para_direita_dct[self.valor]
-        # Todos if/elif foram substituidos por uma linha de codigo usando o dinicionario
+        # Todos if/elif foram substituidos por uma linha de codigo usando o dicionario
         #  if self.valor == NORTE:
         #     self.valor = LESTE
         # elif self.valor == LESTE:
@@ -125,7 +126,7 @@ class Direcao:
         #     self.valor = NORTE
     def girar_a_esquerda(self):
         self.valor = self.rotacao_para_esquerda_dct[self.valor]
-        # Todos if/elif foram substituidos por uma linha de codigo usando o dinicionario
+        # Todos if/elif foram substituidos por uma linha de codigo usando o dicionario
         # if self.valor == NORTE:
         #     self.valor = OESTE
         # elif self.valor == OESTE:
