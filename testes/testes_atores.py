@@ -146,6 +146,7 @@ class ObstaculoTestes(TestCase):
     """
     Esperado '0' como caracter de obstáculo ativo e ' ' como caracter de obstáculo destruído
     """
+
     def teste_status(self):
         obstaculo = Obstaculo()
         self.assertEqual('O', obstaculo.caracter())

@@ -57,12 +57,12 @@ class Ator():
 
 
 class Obstaculo(Ator):
-    pass
+    _caracter_ativo = 'O' # sobrescrita realizada pois estava herdando o valor de 'A' de Ator
 
 
 class Porco(Ator):
-    pass
-
+    _caracter_ativo = '@'
+    _caracter_destruido = '+'
 
 class DuploLancamentoExcecao(Exception):
     pass
@@ -137,4 +137,4 @@ class PassaroAmarelo(Passaro):
 
 
 class PassaroVermelho(Passaro):
-    pass
+    _caracter_ativo = 'V'
